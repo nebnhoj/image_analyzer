@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "998692869959",
+    "firebase_url": "https://image-analyzer-247116.firebaseio.com",
+    "project_id": "image-analyzer-247116",
+    "storage_bucket": "image-analyzer-247116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998692869959:android:4271c865dc48c99d",
+        "android_client_info": {
+          "package_name": "dev.jbcu10.image_analyzer_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998692869959-juv5qp7v68vbf0uq8s9cuubn6kc101lr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG-j-3HAcmYh4tMrW_QfT0ZvYusyaierg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998692869959-juv5qp7v68vbf0uq8s9cuubn6kc101lr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998692869959-md89o1sngnirvvkp9ddj3nj6ckd299mu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "asd",
+                "app_store_id": "123123"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2063494299935345~2130110830"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998692869959:android:c3842ad71bc8b14c",
+        "android_client_info": {
+          "package_name": "dev.jbcu10.imageanalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998692869959-juv5qp7v68vbf0uq8s9cuubn6kc101lr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG-j-3HAcmYh4tMrW_QfT0ZvYusyaierg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998692869959-juv5qp7v68vbf0uq8s9cuubn6kc101lr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998692869959-md89o1sngnirvvkp9ddj3nj6ckd299mu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "asd",
+                "app_store_id": "123123"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2063494299935345~7206451113"
+    }
+  ],
+  "configuration_version": "1"
+}
