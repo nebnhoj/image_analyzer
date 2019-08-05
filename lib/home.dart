@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
         actions: <Widget>[
-         _isLoading ?new CircularProgressIndicator(): IconButton(icon: Icon(Icons.camera_alt,color: Colors.white,),onPressed: _showDialog,)
+         _isLoading ? Container(child: new CircularProgressIndicator(),height: 10,width: 60,): IconButton(icon: Icon(Icons.camera_alt,color: Colors.white,),onPressed: _showDialog,)
          ]
 
       ),
