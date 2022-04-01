@@ -1,13 +1,13 @@
 class ResponseBody {
-  List<Responses> responses;
+  List<Responses>? responses;
 
   ResponseBody({this.responses});
 
   ResponseBody.fromJson(Map<String, dynamic> json) {
     if (json['responses'] != null) {
-      responses = new List<Responses>();
+      responses =[];
       json['responses'].forEach((v) {
-        responses.add(new Responses.fromJson(v));
+        responses!.add(new Responses.fromJson(v));
       });
     }
   }
@@ -15,22 +15,22 @@ class ResponseBody {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.responses != null) {
-      data['responses'] = this.responses.map((v) => v.toJson()).toList();
+      data['responses'] = this.responses!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class Responses {
-  List<LabelAnnotations> labelAnnotations;
+  List<LabelAnnotations>? labelAnnotations;
 
   Responses({this.labelAnnotations});
 
   Responses.fromJson(Map<String, dynamic> json) {
     if (json['labelAnnotations'] != null) {
-      labelAnnotations = new List<LabelAnnotations>();
+      labelAnnotations = [];
       json['labelAnnotations'].forEach((v) {
-        labelAnnotations.add(new LabelAnnotations.fromJson(v));
+        labelAnnotations!.add(new LabelAnnotations.fromJson(v));
       });
     }
   }
@@ -39,17 +39,17 @@ class Responses {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.labelAnnotations != null) {
       data['labelAnnotations'] =
-          this.labelAnnotations.map((v) => v.toJson()).toList();
+          this.labelAnnotations!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class LabelAnnotations {
-  String mid;
-  String description;
-  double score;
-  double topicality;
+  String? mid;
+  String? description;
+  double? score;
+  double? topicality;
 
   LabelAnnotations({this.mid, this.description, this.score, this.topicality});
 

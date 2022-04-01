@@ -1,13 +1,13 @@
 class RequestBody {
-  List<Requests> requests;
+  List<Requests>? requests;
 
   RequestBody({this.requests});
 
   RequestBody.fromJson(Map<String, dynamic> json) {
     if (json['requests'] != null) {
-      requests = new List<Requests>();
+      requests = [];
       json['requests'].forEach((v) {
-        requests.add(new Requests.fromJson(v));
+        requests!.add(new Requests.fromJson(v));
       });
     }
   }
@@ -15,24 +15,24 @@ class RequestBody {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.requests != null) {
-      data['requests'] = this.requests.map((v) => v.toJson()).toList();
+      data['requests'] = this.requests!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class Requests {
-  ImageSrc image;
-  List<Features> features;
+  ImageSrc? image;
+  List<Features>? features;
 
   Requests( {this.image, this.features});
 
   Requests.fromJson(Map<String, dynamic> json) {
     image = json['image'] != null ? new ImageSrc.fromJson(json['image']) : null;
     if (json['features'] != null) {
-      features = new List<Features>();
+      features = [];
       json['features'].forEach((v) {
-        features.add(new Features.fromJson(v));
+        features!.add(new Features.fromJson(v));
       });
     }
   }
@@ -40,17 +40,17 @@ class Requests {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.image != null) {
-      data['image'] = this.image.toJson();
+      data['image'] = this.image!.toJson();
     }
     if (this.features != null) {
-      data['features'] = this.features.map((v) => v.toJson()).toList();
+      data['features'] = this.features!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
 class ImageSrc {
-  Source source;
+  Source? source;
 
   ImageSrc({this.source});
 
@@ -62,14 +62,14 @@ class ImageSrc {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.source != null) {
-      data['source'] = this.source.toJson();
+      data['source'] = this.source!.toJson();
     }
     return data;
   }
 }
 
 class Source {
-  String gcsImageSrcUri;
+  String? gcsImageSrcUri;
 
   Source({this.gcsImageSrcUri});
 
@@ -85,7 +85,7 @@ class Source {
 }
 
 class Features {
-  String type;
+  String? type;
   Features({this.type});
 
   Features.fromJson(Map<String, dynamic> json) {

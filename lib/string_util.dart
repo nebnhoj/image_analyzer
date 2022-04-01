@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 class StringUtil{
 
 
-  static String toPercent(double num){
+  static String toPercent(double? num){
     if(num==null){
       return '';
     }

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'constant/strings.dart';
 import 'home.dart';
 
-void main() => runApp(MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -12,10 +17,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: TITLE,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-          primaryColor: Colors.blueGrey ,
+        brightness: Brightness.light
+        
       ),
-      home: MyHomePage(title: TITLE),
+      darkTheme:ThemeData(
+          brightness: Brightness.dark
+
+      ),
+      themeMode: ThemeMode.dark,
+      home: MyHomePage(),
     );
   }
 }

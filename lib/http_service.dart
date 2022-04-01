@@ -17,12 +17,12 @@ class HttpService {
     );
 
 
-    FormData formData = FormData.from({
-      "file": new UploadFileInfo.fromBytes(_image.readAsBytesSync(), fileName,
-          contentType: ContentType.parse(mime(fileName)))
-    });
+    FormData formData = FormData.fromMap({
+      'file': await MultipartFile.fromFile(_image.path, filename: fileName),
 
+    });
     String name = '${DateTime.now().millisecondsSinceEpoch}.${basename(_image.path).split('.').last}';
+
     String url = 'https://www.googleapis.com/upload/storage/v1/b/image-analyzer-1/o?name=${name}';
 
 
@@ -36,7 +36,7 @@ class HttpService {
 
   Future<Response> analyzeImage(String uri,List<Features> features) async{
     Dio dio = Dio();
-    List<Requests> requests = new List();
+    List<Requests> requests = [];
     requests.add(new Requests(image: ImageSrc(source: new Source(gcsImageSrcUri: uri)),features: features));
 
     String url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDE1SphLw569Pd2ZQLziBbvBSFGSV3KZH0';

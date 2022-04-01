@@ -3,8 +3,8 @@ import 'package:image_analyzer_v2/response_body.dart';
 import 'package:image_analyzer_v2/string_util.dart';
 
 class Item extends StatelessWidget {
-  final LabelAnnotations labelAnnotations;
-  const Item({Key key, this.labelAnnotations}) : super(key: key);
+  final LabelAnnotations? labelAnnotations;
+  const Item({Key? key, this.labelAnnotations}) : super(key: key);
 
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -13,16 +13,16 @@ class Item extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Text(
-            '${StringUtil.toPercent(labelAnnotations.score)}',
+            '${StringUtil.toPercent(labelAnnotations!.score)}',
             style: TextStyle(
-                color: (labelAnnotations.score * 100) > 80
+                color: (labelAnnotations!.score! * 100) > 80
                     ? Colors.green
-                    : (labelAnnotations.score * 100) > 60 ? Colors.orangeAccent
+                    : (labelAnnotations!.score! * 100) > 60 ? Colors.orangeAccent
                     :   Colors.redAccent ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 10),
-            child: Text('${labelAnnotations.description}'),
+            child: Text('${labelAnnotations!.description}'),
           )
         ],
       ),
